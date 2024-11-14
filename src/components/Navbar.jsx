@@ -13,7 +13,7 @@ const Navbar = () => {
       <div>
         <div className="flex items-center gap-5">
           <img src={user} alt="" />
-          <button className="btn bg-gray-800 text-white font-medium hover:bg-pink-600 px-7">Login</button>
+          <Link to={"/auth/login"} className="btn bg-gray-800 text-white font-medium hover:bg-pink-600 px-7">Login</Link>
         </div>
       </div>
     </div>
