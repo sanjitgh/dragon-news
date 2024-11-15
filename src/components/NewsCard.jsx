@@ -4,9 +4,11 @@ import Rating from "react-rating";
 import { CiStar } from "react-icons/ci";
 import { IoIosStar } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
-  const { author, rating, thumbnail_url, title, total_view, details } = news;
+  const { _id, author, rating, thumbnail_url, title, total_view, details } =
+    news;
 
   return (
     <>
@@ -40,9 +42,12 @@ const NewsCard = ({ news }) => {
             alt=""
           />
           <p className="text-gray-500 my-3">{details.slice(0, 350)}...</p>
-          <span className="font-semibold text-orange-500 cursor-pointer">
+          <Link
+            to={`/news/${_id}`}
+            className="font-semibold text-orange-500 cursor-pointer"
+          >
             Read More
-          </span>
+          </Link>
           <div className="divider"></div>
           {/* card footer */}
           <div className="flex justify-between items-center">
